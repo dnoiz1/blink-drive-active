@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+
+  "name": "Blink Drive Active",
+  "description": "stay aligned to planet blink!",
+  "version": "0.5",
+  "background": { "scripts": ["background.js"] },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://cogdev.net/*"],
+      "css": ["css/blink.css"],
+      "js": ["js/jquery.min.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://cogdev.net/*"],
+      "js": ["dom.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "permissions": [
+    "*://cogdev.net/*",
+    "*://*.cogdev.net/*",
+    "*://ajax.googleapis.com/*",
+    "*://www.google-analytics.com/*",
+    "*://image.eveonline.com/*",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  
+  "web_accessible_resources": [
+    "images/arrow_refresh.png",
+    "images/favicon.ico",
+    "js/blink.min.js",
+    "js/jquery.min.js",
+    "css/blink.css"
+  ]
+}
