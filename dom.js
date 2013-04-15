@@ -7,6 +7,8 @@ $('br').remove();
 $('a#mnu_show_promos').attr('href', '/blink/?act=show_promos&type=promo');
 $('div.span-3 > a#mnu_stats').html('Weekly Tokens').attr('href', '/blink/freetoken/get');
 
+
+/*
 var bw = [];
 
 function WatchBlink(id)
@@ -25,3 +27,4 @@ $('img.blink_live').click(function(){
   bw.push(id);
   WatchBlink(id);
 });
+*/
