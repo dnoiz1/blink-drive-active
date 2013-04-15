@@ -15,7 +15,7 @@ features:
  - adds a weekly free tokens button
  - promo menu button goes directly to past promos
  - toolbar icon allows you to quick switch to and refresh your blink tab or open blink in a new tab!
- ~~- clicking the update button will watch that blink until it completes or until you refresh~~
+ - ~~clicking the update button will watch that blink until it completes or until you refresh~~
 
 The Toolbar Button has 3 functions
  - Click to open a new blink tab if one is not open
@@ -31,7 +31,7 @@ Easy Installation
 Manual Installation
 ===================
 
-Clone the repo or download a zip and extract it anyway.
+Clone the repo or download a zip and extract it anywhere.
 
  - In chrome visit chrome://extensions
  - Enable developer mode
