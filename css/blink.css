@@ -506,6 +506,7 @@ img.blink_live{cursor:pointer;}
 #staff.preauth #wallet tr:hover td.undo img{display:inline;}
 .leaderboard dt{position:relative;}
 .leaderboard span.place{position:absolute;bottom:0;left:0;}
+
 img,
 div.span-20,
 div#blink_gtcbuy,
@@ -519,6 +520,8 @@ div.span-3 > a#mnu_faq,
 #featured_scroll div.span-10,
 #featured_scroll.span-13 div,
 #promo_description div.span-4,
+#winings,
+#winnings big,
 h2.pretty {display:none}
 hr.space { height: 1px; width: 1px; margin: 0;}
 p[style="margin-bottom:0;"] { display: inline; }

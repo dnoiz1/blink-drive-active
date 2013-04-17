@@ -3,7 +3,7 @@
 
   "name": "Blink Drive Active",
   "description": "stay aligned to planet blink!",
-  "version": "0.6",
+  "version": "0.7",
   "background": { "scripts": ["background.js"] },
   
   "content_scripts": [

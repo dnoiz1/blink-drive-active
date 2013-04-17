@@ -8,6 +8,17 @@ var local_files = {
   'blink.css': 'css'
 };
 
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.method == "getLocalStorage")  {
+      sendResponse({data: localStorage.getItem(request.key)});
+    } else if(request.method == 'setLocalStorage') {
+      localStorage.setItem(request.key, request.value);
+      sendResponse({data: 'ok'});
+    } else {
+      sendResponse({});
+    }
+});
+
 chrome.browserAction.onClicked.addListener(function(activeTab) {
   if(activeTab.url.indexOf(BlinkUrl) === 0) {
     chrome.tabs.update(activeTab.id, {
@@ -55,11 +66,10 @@ chrome.webRequest.onBeforeRequest.addListener(
          || url.indexOf('get_prize.php') !== -1
          || url.indexOf('freetoken/get') !== -1
          || details.method == 'POST'
-         || url.indexOf('cogdev') === -1
         ) {
           return { cancel: false };
         }
-    
+        
       if(details.url.indexOf('/blink/?act=') === -1) {
           return { cancel: true };
         }
